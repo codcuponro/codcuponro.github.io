@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodCupon</title>
     <style>
+        :root {
+            --primary-color: #6B46C1;  /* Purple color from the logo */
+            --text-color: #2D3748;
+            --light-text: #666;
+            --background: #F7FAFC;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,8 +21,8 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            color: var(--text-color);
+            background-color: var(--background);
         }
 
         .container {
@@ -31,13 +38,15 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        header h1 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 1rem;
         }
 
         header p {
-            color: #666;
+            color: var(--light-text);
+            font-size: 1.1rem;
         }
 
         .content {
@@ -49,19 +58,20 @@
         }
 
         .content h2 {
-            color: #2c3e50;
+            color: var(--primary-color);
             margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
 
         .content p {
-            color: #666;
+            color: var(--light-text);
             margin-bottom: 1.5rem;
         }
 
         footer {
             text-align: center;
             padding: 2rem 0;
-            color: #666;
+            color: var(--light-text);
             margin-top: 2rem;
         }
 
@@ -69,13 +79,21 @@
             .container {
                 padding: 1rem;
             }
+            .logo {
+                max-width: 150px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>CodCupon</h1>
+            <svg width="200" height="50" viewBox="0 0 1000 200">
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" 
+                      font-family="Arial, sans-serif" font-size="120" fill="#6B46C1">
+                    codcupon
+                </text>
+            </svg>
             <p>Your source for coding deals and discounts</p>
         </div>
     </header>
