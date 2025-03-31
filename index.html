@@ -12,12 +12,16 @@
             padding: 0;
             background: #f8f9fa;
             color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
             text-align: center;
+            flex: 1;
         }
         .logo {
             width: 220px;
@@ -29,13 +33,25 @@
             color: #666;
             margin-bottom: 2rem;
         }
-        .links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        .card h2 {
+            color: #5b21b6;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .card p {
+            color: #666;
+            margin-bottom: 1.5rem;
         }
         .link {
+            display: inline-block;
             background: #5b21b6;
             color: white;
             padding: 0.8rem 1.5rem;
@@ -45,6 +61,19 @@
         }
         .link:hover {
             background: #4c1d95;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+        footer a {
+            color: #5b21b6;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -63,10 +92,16 @@
             </g>
         </svg>
         <p class="description">Sursa ta de încredere pentru coduri de reducere și cupoane online</p>
-        <div class="links">
-            <a href="https://github.com/codcuponro/cod-reducere-dr-max" class="link">Cod Reducere Dr Max</a>
-            <a href="http://codcupon.ro/" class="link">Site Principal</a>
+        
+        <div class="card">
+            <h2>Cod Reducere Dr Max</h2>
+            <p>Descoperă cele mai bune coduri de reducere pentru Dr Max. Actualizate zilnic pentru a te ajuta să economisești la cumpărăturile tale.</p>
+            <a href="https://github.com/codcuponro/cod-reducere-dr-max" class="link">Vezi codurile</a>
         </div>
     </div>
+
+    <footer>
+        <a href="http://codcupon.ro/">codcupon.ro</a>
+    </footer>
 </body>
 </html> 
